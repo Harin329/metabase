@@ -65,6 +65,8 @@
 
 (defn- default-runf [query rff context]
   (try
+    (println "I'm here!")
+    (println query)
     (qp.context/executef driver/*driver* query context (fn respond* [metadata reducible-rows]
                                                          (qp.context/reducef rff context metadata reducible-rows)))
     (catch Throwable e

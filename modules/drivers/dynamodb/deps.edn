@@ -1,0 +1,5 @@
+{:paths
+ ["src" "resources"]
+
+ :deps
+ {com.taoensso/faraday {:mvn/version "1.12.0"}}}

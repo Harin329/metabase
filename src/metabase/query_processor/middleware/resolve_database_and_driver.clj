@@ -6,7 +6,8 @@
    [metabase.query-processor.error-type :as qp.error-type]
    [metabase.query-processor.store :as qp.store]
    [metabase.util :as u]
-   [metabase.util.i18n :refer [tru]]))
+   [metabase.util.i18n :refer [tru]]
+   [metabase.models.query :as query]))
 
 (defn- resolve-database* [{database-id :database, :as query}]
   (u/prog1 query
@@ -23,6 +24,9 @@
                       {:database database-id
                        :type     qp.error-type/invalid-query})))
     (resolve-database* query)
+    (println (select-keys query [:database :query]))
+    (println query)
+    (println "hello yes")
     (let [{:keys [settings], driver :engine} (qp.store/database)]
       ;; make sure the driver is initialized.
       (try

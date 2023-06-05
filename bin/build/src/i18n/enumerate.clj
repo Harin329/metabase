@@ -19,6 +19,7 @@
                            ["/src" "/shared/src" "/enterprise/backend/src"
                             "/modules/drivers/bigquery-cloud-sdk/src"
                             "/modules/drivers/druid/src"
+                            "/modules/drivers/dynamodb/src"
                             "/modules/drivers/google/src"
                             "/modules/drivers/googleanalytics/src"
                             "/modules/drivers/mongo/src"
